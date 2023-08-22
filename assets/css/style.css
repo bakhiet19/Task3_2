@@ -5,6 +5,7 @@
     text-transform: capitalize;
     text-decoration: none;
     list-style-type: none;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -14,15 +15,25 @@
     --margin : 60px;
     --font-weight : bold;
     --pading : 10px;
+    --text-c : center;
 }
 
-/* header{
-    max-width: 100vw;
-    min-width: 100vw;
-} */
+hr{
+    display: none;
+    color: var(--second-color);
+    width: 100%;
+}
+
+h2{
+    margin-bottom: 40px;
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    text-align: center;
+    cursor: pointer;
+}
+
 
 .nav-ul{
-    display: flex;
     justify-content: space-around;
     background-color: var(--main-color);
     padding: 13px var(--pading);
@@ -34,7 +45,6 @@
     /* max-width: 100vw; */
 }
 .nav-ul .childs{
-    display: flex;
     justify-content: space-around;
 }
 
@@ -56,9 +66,9 @@
     height: 90vh;
     background-size: cover;
     background-position: center;
-    display: flex;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -80,7 +90,6 @@
 
 
 .about{
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: var(--margin);
@@ -89,37 +98,21 @@
 
 
 .about div{
-    text-align: center;
+    text-align: var(--text-c);
 }
-
-.about div h2{
-    font-size: var(--font-size);
-    margin-bottom: 10px;
-    font-weight: var(--font-weight);
-}
-
-
 
 .services{
     margin-top: var(--margin);
     margin-bottom: var(--margin);
     background-color: var(--main-color);
-    text-align: center;
+    text-align: var(--text-c);
     padding-top: 40px;
     padding-bottom: 40px;
     color: var(--second-color);
 }
 
-.services h2{
-    margin-bottom: 40px;
-    font-weight: bold;
-    font-size: var(--font-size);
-}
-
 .services-child{
-    display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .services-child-child{
@@ -129,7 +122,7 @@
 .specilization{
     margin-top: var(--margin);
     margin-bottom: var(--margin);
-    text-align: center;
+    text-align: var(--text-c);
     padding-top: 40px;
     padding-bottom: 40px;
     
@@ -137,9 +130,7 @@
 
 
 .specilization-child{
-    display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 
@@ -170,7 +161,6 @@
 
 
 .teachers-child{
-    display: flex;
     justify-content: space-evenly;
 }
 
@@ -187,6 +177,10 @@
 
 .teachers .teachers-child img{
     border-radius: 5px;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 
@@ -202,19 +196,18 @@
     margin-bottom: 40px;
     font-weight: var(--font-weight);
     font-size: var(--font-size);
-    text-align: center;
+    text-align: var(--text-c);
     
     
 }
 
 
 .contact .form{
-    display: flex;
     justify-content: center;
 }
 
-.contact input{
-    width: 300px;
+.contact input , textarea{
+    width: 400px;
     padding: 5px;
 }
 
@@ -223,7 +216,7 @@
 }
 
 .form div:last-of-type{
-    text-align: center;
+    text-align: var(--text-c);
 }
 
  .btn{
@@ -241,7 +234,7 @@
 
 
 .contact .contact-child{
-    text-align: center;
+    text-align: var(--text-c);
 }
 
 .contact .contact-child p{
@@ -253,19 +246,9 @@
     margin-top: var(--margin);
 }
 
-.plans h2{
-    margin-bottom: 40px;
-    font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    text-align: center;
-}
 
 .plans .parent{
-    display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    
-    
 }
 
 .plans .parent .child{
@@ -297,7 +280,6 @@ footer{
 }
 
 footer ul{
-    display: flex;
     justify-content: center;
     gap: 1rem;
 }
@@ -312,24 +294,6 @@ footer ul li a:hover{
     background-color: var(--main-color);
     padding: 8px;
 }
-
-
-
-
-hr{
-    display: none;
-    color: var(--second-color);
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -381,8 +345,37 @@ hr{
     hr{
         display: block;
     }
-    .plans .parent{
-        
+    .contact input , textarea{
+        max-width: 300px;
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* my framework */
+
+
+.cl-flex{
+    display: flex;
+}
+
+.cl-wrap{
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
