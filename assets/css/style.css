@@ -50,7 +50,7 @@ h2{
 
 .nav-ul li a{
     color: var(--second-color);
-    margin: 0 7px;
+    margin: 0 10px;
 }
 
 
@@ -140,7 +140,9 @@ h2{
     font-size: var(--font-size);
 }
 
-
+.specilization .specilization-child-child{
+    margin: 15px;
+}
 
 .specilization .specilization-child-child h3{
     margin-top: 10px;
@@ -206,9 +208,14 @@ h2{
     justify-content: center;
 }
 
+.contact input{
+    height: 35px;
+}
+
 .contact input , textarea{
     width: 400px;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .form div{
@@ -329,7 +336,7 @@ footer ul li a:hover{
         
     }
     .specilization-child .specilization-child-child{
-        margin: 10px auto;
+        margin: 20px auto;
     }
     .teachers-child{
         flex-wrap: wrap;
